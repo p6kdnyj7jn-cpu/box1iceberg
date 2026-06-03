@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Iceberg</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #111;
+      color: white;
+      text-align: center;
+    }
+
+    .iceberg-box {
+      position: relative;
+      width: 900px;
+      margin: 30px auto;
+    }
+
+    .iceberg-box img {
+      width: 100%;
+      display: block;
+    }
+
+    .entry {
+      position: absolute;
+      background: rgba(255, 255, 255, 0.85);
+      color: black;
+      padding: 6px 10px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .popup {
+      display: none;
+      position: absolute;
+      background: white;
+      color: black;
+      width: 280px;
+      padding: 12px;
+      border-radius: 10px;
+      text-align: left;
+      box-shadow: 0 0 15px black;
+      z-index: 10;
+    }
+
+    .entry:hover + .popup {
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>My Iceberg</h1>
+
+  <div class="iceberg-box">
+    <img src="iceberg.png">
+
+    <div class="entry" style="left: 360px; top: 80px;">
+      Entry One
+    </div>
+    <div class="popup" style="left: 470px; top: 80px;">
+      This is where the longer explanation goes. You can write a full paragraph here.
+    </div>
+
+    <div class="entry" style="left: 250px; top: 220px;">
+      Entry Two
+    </div>
+    <div class="popup" style="left: 360px; top: 220px;">
+      This is another explanation. Each entry gets its own popup.
+    </div>
+
+  </div>
+</body>
+</html>
